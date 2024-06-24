@@ -1,0 +1,31 @@
+header{
+    @apply w-dvw z-50 transition-all duration-200 bg-[#F9FBFF] py-6;
+
+    #header-logo{
+        @apply w-2/3 md:w-full;
+    }
+    
+    &.active{
+            @apply bg-white fixed top-0 py-4;
+    }
+
+    #navigation{
+        @apply w-dvw h-dvh transition-all px-8 justify-center flex flex-col top-0 left-0 rounded-none;
+
+        > div > ul > li{
+            @apply divide-x divide-blue-900 py-3 first:pt-6 border-b-blue-900 border-b border-solid last:border-none text-center hover:text-orange;
+        }
+
+        .btn{
+            @apply w-fit mt-6 self-center;
+        }
+
+        #closeButton{
+            @apply absolute top-4 right-4;
+        }
+    }
+}
+
+header.active + main{
+    @apply pt-[104px];
+}
